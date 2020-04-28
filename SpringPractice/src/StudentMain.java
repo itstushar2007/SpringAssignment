@@ -131,17 +131,4 @@ public class StudentMain {
 			// TODO Auto-generated method stub
 			new StudentMain();
 		}
-		/*
-		 * Student stud = (Student) ctx.getBean("stud"); System.out.println(stud);
-		 * 
-		 * EntityManagerFactory emf =
-		 * Persistence.createEntityManagerFactory("studentity"); EntityManager em=
-		 * emf.createEntityManager();
-		 * 
-		 * em.getTransaction().begin(); em.persist(stud); em.getTransaction().commit();
-		 * System.out.println("Student Saved");
-		 */
-	//	Student stud1 = (Student) ctx.getBean("stud1"); 
-	//	System.out.println(stud1);
-
-}
+		
