@@ -29,7 +29,7 @@ public class StudentMain {
 				System.out.println("Create Student");
 				System.out.println("Enter houseId City");
 				Address addr = new Address(sc.nextInt(), sc.next());
-				System.out.println("Enter ID , Name , Mobile ,Subject");
+				System.out.println("Enter Student ID , Name , Mobile ,Subject");
 				Student stud = new Student(sc.nextInt(),sc.next(),
 						          sc.nextLong(),sc.next(),addr);
 				boolean success = studService.create(stud);
@@ -56,13 +56,13 @@ public class StudentMain {
 				System.out.println("Enter Student Id");
 				Student upStudent = studService.find(sc.nextInt());
 				if(upStudent!=null) {
-					System.out.println("Enter <Name> <Mobile> <Subject>");
+					System.out.println("Enter Name, Mobile ,Subject");
 					upStudent.setName(sc.next());
 					upStudent.setMobile(sc.nextLong());
 					upStudent.setSubject(sc.next());
 					Address AddressUp = upStudent.getAddress();
 					
-					System.out.println("Enter <City>");
+					System.out.println("Enter City");
 					
 					AddressUp.setCity(sc.next());
 				
