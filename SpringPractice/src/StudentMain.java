@@ -27,9 +27,9 @@ public class StudentMain {
 			switch (choice) {
 			case 1:
 				System.out.println("Create Student");
-				System.out.println("Enter <houseId> <City>");
+				System.out.println("Enter houseId City");
 				Address addr = new Address(sc.nextInt(), sc.next());
-				System.out.println("Enter <ID> <Name> <Mobile> <Subject>");
+				System.out.println("Enter ID , Name , Mobile ,Subject");
 				Student stud = new Student(sc.nextInt(),sc.next(),
 						          sc.nextLong(),sc.next(),addr);
 				boolean success = studService.create(stud);
