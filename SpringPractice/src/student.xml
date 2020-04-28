@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+      http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+      http://www.springframework.org/schema/context 
+      http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+<context:annotation-config/>
+<bean id="service" class="com.cg.iter.service.StudentServiceImpl"/>
+	<bean id="stud" class="com.cg.iter.bean.Student">
+		<constructor-arg name="id" value="1234"/>
+		<constructor-arg name="name" value="Tushar"/>
+		<constructor-arg name="mobile" value="9999999999"/>
+		<constructor-arg name="subject" value="CS"/>
+		<constructor-arg name="address" ref="addr"/>
+		
+	</bean>
+	
+	
+	<bean id="addr" class="com.cg.iter.bean.Address">
+		<property name="HouseNo" value="111" />
+		<property name="city" value="Rkl" />
+	</bean>
+	<!-- 
+	<bean id="stud1" class="com.cg.iter.bean.Student">
+		<property name="id" value="1235" />
+		<property name="name" value="Soumya" />
+		<property name="mobile" value="777777777" />
+		<property name="subject" value="CSIT" />
+		<property name="address" ref="address"/>
+	</bean> -->
+	
+	
+	<!-- <bean id="address" class="com.cg.iter.bean.Address">
+		<property name="HouseNo" value="112" />
+		<property name="city" value="Kolkata" />
+	</bean> -->
+	
+</beans>
